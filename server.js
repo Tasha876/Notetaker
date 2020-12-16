@@ -1,38 +1,33 @@
+
+// DEPENDENCIES
+// Series of npm packages that we will use to give our server useful functionality
+
 const express = require('express');
+
+// EXPRESS CONFIGURATION
+// This sets up the basic properties for our express server
+
+// Tells node that we are creating an "express" server
 const app = express();
-const port = 8080;
 
-const fs = require('fs');
-const path = require('path');
+// Sets an initial port. We"ll use this later in our listener
+const PORT = process.env.PORT || 8081;
 
-app.use(express.json());
+// Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('/notes', (req, res) => {
-  let data = fs.readFileSync(__dirname + '/public/notes.html');
-  res.send(data.toString());
+// ROUTER
+// The below points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs.
+
+require('./routes/apiRoutes')(app);
+require('./routes/htmlRoutes')(app);
+
+// LISTENER
+// The below code effectively "starts" our server
+
+app.listen(PORT, () => {
+  console.log(`App listening on PORT: ${PORT}`);
 });
 
-
-let data = JSON.parse(fs.readFileSync(__dirname + '/db/db.json').toString());
-
-app.get('/api/notes', (req, res) => {
-  res.json(data);
-});
-
-app.post('/api/notes', (req, res) => {
-  const newNote = req.body
-  console.log(newNote)
-  data.push(newNote);
-  // console.log('here', req.body.name);
-  res.json(true);
-});
-
-app.get('*', (req, res) => {
-  let data = fs.readFileSync(__dirname + '/public/index.html');
-  res.send(data.toString());
-});
-
-app.listen(port, () => {
-  console.log(`listening at http://localhost:${port}`);
-})
