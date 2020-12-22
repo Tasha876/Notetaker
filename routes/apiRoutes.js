@@ -23,7 +23,6 @@ module.exports = (app) => {
     // When a user submits a note (a JSON object)
     // ...the JSON is pushed to the JavaScript array
     // Then the server saves the data to the noteData array)
-    noteData[0].id = '0';
     app.post(path.join('/api/notes'), (req, res) => {
     
         req.body.id = uniqid();
