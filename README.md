@@ -30,9 +30,9 @@ Click on the notes pane to add a note. Click on the save button once you have en
 ## 3 Visuals
 ### Pictures of the site
 #### Splash page
-![ picture1 ](notetaker-main.png)
+![ picture1 ](visuals/notetaker-main.png)
 #### Main page
-![ picture2 ](notetaker1.png)
+![ picture2 ](visuals/notetaker1.png)
 ### Demo video
 [ Download demo video here! ](https://drive.google.com/file/d/1hKW1kwrKFErjRBulUkfOqPXXwFvXeUWe/view?usp=sharing)
 
