@@ -5,7 +5,6 @@
 const express = require('express');
 
 const path = require('path');
-const htmlRoutes = require('./routes/htmlRoutes');
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
@@ -13,7 +12,7 @@ const htmlRoutes = require('./routes/htmlRoutes');
 // Tells node that we are creating an "express" server
 const app = express();
 
-// Sets an initial port. We"ll use this later in our listener
+// Sets an initial port used later in the listener
 const PORT = process.env.PORT || 8080;
 
 // Sets up the Express app to handle data parsing
