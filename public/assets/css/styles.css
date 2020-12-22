@@ -6,13 +6,25 @@ html, body {
 
 .save-note {
   display: none;
-}
+} 
 
 .icons i {
   margin-left: 15px;
   margin-right: 15px;
   font-size: 1.5rem;
   cursor: pointer;
+}
+
+/* added to get rid of scrollbar */
+
+.container-fluid {
+  height: calc(100% - 70.375px) !important;
+}
+
+/* --- */
+
+.list-container, .row, .card  {
+  height: calc(100%) !important;
 }
 
 .note-textarea, .note-title {
@@ -24,12 +36,14 @@ html, body {
 
 .note-textarea {
   resize: none;
-  height: calc(100% - 63px);
+  /* changed height to get rid of scroll-bar */
+  height: calc(100% - 70.375px - 0.25rem - 15px * 2);
   padding-top: 15px;
 }
 
+/* changed height, so descenders have room */
 .note-title {
-  height: 50px;
+  height: auto;
   margin-top: 13px;
   font-size: 3rem;
 }
@@ -63,8 +77,24 @@ html, body {
 }
 
 .list-container .list-group-item {
+  box-sizing: border-box;
   border-left: none;
   border-right: none;
-  padding: 20px;
+  padding: 0;
   cursor: pointer;
+  height: 100%;
+}
+
+/* changed the bottom 2 styles slightly, so that you can select outside of text and still get note */
+
+.list-container .list-group-item span {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 20px;
+  height: 100%;
+  width: calc(100% - 16px - 20px);
+}
+
+.delete-note {
+  margin: 20px 20px 20px 0;
 }

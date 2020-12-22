@@ -57,10 +57,15 @@ const renderActiveNote = () => {
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);
     noteTitle.value = activeNote.title;
-    noteText.value = activeNote.title;
+
+    // I think there was a typo here, but I fixed it, now the note shows the note text as well
+    noteText.value = activeNote.text;
   } else {
     noteTitle.value = '';
     noteText.value = '';
+    // added this, so that after you view a note, you can still type a new one
+    noteTitle.removeAttribute('readOnly');
+    noteText.removeAttribute('readOnly');
   }
 };
 
@@ -107,7 +112,8 @@ const handleNewNoteView = (e) => {
 };
 
 const handleRenderSaveBtn = () => {
-  if (!noteTitle.value.trim() || !noteText.value.trim()) {
+  // added another condition so that when you type over saved note, the save button doesn't come up
+  if (!noteTitle.value.trim() || !noteText.value.trim() || noteText.getAttribute('readonly')) {
     hide(saveNoteBtn);
   } else {
     show(saveNoteBtn);
@@ -130,6 +136,7 @@ const renderNoteList = async (notes) => {
 
     const spanEl = document.createElement('span');
     spanEl.innerText = text;
+
     spanEl.addEventListener('click', handleNoteView);
 
     liEl.append(spanEl);
