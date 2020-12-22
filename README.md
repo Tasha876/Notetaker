@@ -63,7 +63,7 @@ Link to the [GitHub repository](https://github.com/Tasha876/Notetaker).
 <a name="Authors"></a>
 ## 8. Authors and Acknowledgement 
 
-This project was created entirely by [Tasha876](https://github.com/Tasha876).
+The back-end of this project and some of the front-end was created entirely by [Tasha876](https://github.com/Tasha876).
 
 <a name="Questions"></a>
 ## 9. Issues 
