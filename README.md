@@ -12,7 +12,7 @@ Allows users to write, save, and retrieve notes.
 1. [ Link to Repository ](#Link)
 1. [ Deployed Website ](#Site)
 1. [ Next Steps ](#Next)
-1. [ Authors and Aknowledgement ](#Authors)
+1. [ Authors and Acknowledgement ](#Authors)
 1. [ Questions ](#Questions)
 1. [ License ](#License)
 
@@ -43,7 +43,7 @@ Click on the notes pane to add a note. Click on the save button once you have en
 * Allows users to save notes.
 * Allows users to retrieve saved notes.
 * Allows users to delete saved notes.
-* Uses JSONto store user entered data.
+* Uses JSON to store user entered data.
 
 <a name="Link"></a>
 ## 5. Link to the Repository 
@@ -58,10 +58,10 @@ Link to the [GitHub repository](https://github.com/Tasha876/Notetaker).
 <a name="Next"></a>
 ## 7. Next Steps
 * Definitely add functionality to allow users to modify saved notes.
-* Imporove UI and UI colour-pallette.
+* Improve UI and UI colour-palette.
 
 <a name="Authors"></a>
-## 8. Authors and Aknowledgement 
+## 8. Authors and Acknowledgement 
 
 This project was created entirely by [Tasha876](https://github.com/Tasha876).
 
