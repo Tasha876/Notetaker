@@ -5,6 +5,7 @@
 const express = require('express');
 
 const path = require('path');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server
